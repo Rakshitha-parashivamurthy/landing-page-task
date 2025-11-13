@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Product — Landing Page</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">MyBrand</div>
+      <nav class="nav" id="main-nav">
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+        <a class="cta" href="#signup">Sign up</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <h1>A simple landing page that converts</h1>
+          <p>Clean design, responsive layout, and modern UI using Flexbox and Grid.</p>
+          <a class="btn primary" href="#signup">Get Started</a>
+        </div>
+        <div class="hero-image" aria-hidden="true">
+          <!-- placeholder box or SVG -->
+          <div class="mock-phone">Image</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="features container">
+      <article class="feature">
+        <h3>Responsive</h3>
+        <p>Works on phones, tablets, and desktops.</p>
+      </article>
+      <article class="feature">
+        <h3>Modern Layout</h3>
+        <p>Flexbox and CSS Grid for layout control.</p>
+      </article>
+      <article class="feature">
+        <h3>Easy to Customize</h3>
+        <p>Minimal code, well documented.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> MyBrand. All rights reserved.</p>
+      <div class="social">
+        <a href="#" aria-label="Twitter">T</a>
+        <a href="#" aria-label="LinkedIn">in</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // small script for year and mobile nav toggle
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.nav');
+    toggle.addEventListener('click', () => nav.classList.toggle('open'));
+  </script>
+</body>
+</html>
